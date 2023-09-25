@@ -1,5 +1,9 @@
 class PaymentsController < ApplicationController
+  before_action :set_group
+
   def index
+    @payments = @group.payments.order(created_at: :desc)
+    @total_amount = @payments.sum(:amount)
   end
 
   def show
