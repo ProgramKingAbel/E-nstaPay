@@ -1,6 +1,6 @@
 <h1>New Payment</h1>
 
-<%= form_for([@group, @payment]) do |f| %>
+<%= form_for [@group, @payment] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -8,7 +8,9 @@
   <%= f.number_field :amount %>
 
   <!-- Allow the user to select multiple groups -->
-  <%= f.collection_check_boxes :group_ids, Group.all, :id, :name %>
+  <%= f.collection_check_boxes :group_ids, Group.all, :id, :name, include_hidden: false do |b| %>
+    <%= b.check_box %> <%= b.text %>
+  <% end %>
 
   <%= f.submit 'Create Payment' %>
 <% end %>

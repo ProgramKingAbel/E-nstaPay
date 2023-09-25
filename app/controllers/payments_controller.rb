@@ -2,7 +2,8 @@ class PaymentsController < ApplicationController
   before_action :set_group
 
   def index
-    @payments = Payment.all
+    @group = Group.find(params[:group_id])
+    @payments = @group.payments
     @total_amount = @payments.sum(:amount)
   end
 
@@ -11,6 +12,8 @@ class PaymentsController < ApplicationController
   end
 
   def new
+    @author = current_user
+    @group = Group.find(params[:group_id])
     @payment = Payment.new
   end
 
@@ -20,10 +23,15 @@ class PaymentsController < ApplicationController
     if @payment.save
       if params[:payment][:group_ids].present?
         params[:payment][:group_ids].each do |group_id|
-          group = Group.find(params[:group_id])
-          group.payments << @payment
+          @group = Group.find(group_id)
+          unless @group.payments.exists?(@payment.id)
+          @group.payments << @payment
+        end
         end
       end
+
+      redirect_to group_payments_path(@group), notice: 'Payment was successfully created.'
+
 
       
     else
