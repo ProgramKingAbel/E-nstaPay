@@ -8,12 +8,10 @@ class GroupsController < ApplicationController
     @group = Group.includes(:payments).find(params[:id])
   end
 
-  def new
-  end
+  def new; end
 
   def create
     @group = current_user.groups.build(group_params)
-    
 
     if @group.save
       redirect_to groups_path, notice: 'Group was successfully created.'
@@ -23,14 +21,11 @@ class GroupsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
-  def update
-  end
+  def update; end
 
-  def destroy
-  end
+  def destroy; end
 end
 
 private

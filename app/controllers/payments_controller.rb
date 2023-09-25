@@ -24,16 +24,12 @@ class PaymentsController < ApplicationController
       if params[:payment][:group_ids].present?
         params[:payment][:group_ids].each do |group_id|
           @group = Group.find(group_id)
-          unless @group.payments.exists?(@payment.id)
-          @group.payments << @payment
-        end
+          @group.payments << @payment unless @group.payments.exists?(@payment.id)
         end
       end
 
       redirect_to group_payments_path(@group), notice: 'Payment was successfully created.'
 
-
-      
     else
       puts @payment.errors.full_messages
       render :new
@@ -66,6 +62,6 @@ class PaymentsController < ApplicationController
   end
 
   def payment_params
-    params.require(:payment).permit(:name, :amount, :group_ids => [])
-  end  
+    params.require(:payment).permit(:name, :amount, group_ids: [])
+  end
 end
