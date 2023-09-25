@@ -1,0 +1,19 @@
+<h1>Groups</h1>
+
+<% if @groups.any? %>
+  <ul>
+    <% @groups.each do |group| %>
+      <li>
+      <%= link_to group.name, group_payments_path(group)%>
+        Icon: <%= image_tag group.icon %>
+        Total Amount: <%= group.payments.sum(:amount) %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No groups have been created yet. Please <%= link_to 'create a new group', new_group_path %> to get started.</p>
+<% end %>
+
+<%= link_to 'Add a New Group', new_group_path %>
+
+
