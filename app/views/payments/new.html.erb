@@ -1,2 +1,16 @@
-<h1>Payments#new</h1>
-<p>Find me in app/views/payments/new.html.erb</p>
+<h1>New Payment</h1>
+
+<%= form_for([@group, @payment]) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :amount %>
+  <%= f.number_field :amount %>
+
+  <!-- Allow the user to select multiple groups -->
+  <%= f.collection_check_boxes :group_ids, Group.all, :id, :name %>
+
+  <%= f.submit 'Create Payment' %>
+<% end %>
+
+

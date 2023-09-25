@@ -4,9 +4,10 @@
   <ul>
     <% @groups.each do |group| %>
       <li>
-        <%= link_to group.name, group %>
+        <%=group.name%>
         Icon: <%= image_tag group.icon %>
         Total Amount: <%= group.payments.sum(:amount) %>
+        <%= link_to 'View All Payments', group_payments_path(group) %>
       </li>
     <% end %>
   </ul>
