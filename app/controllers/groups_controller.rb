@@ -13,6 +13,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = current_user.groups.build(group_params)
+    
 
     if @group.save
       redirect_to groups_path, notice: 'Group was successfully created.'
