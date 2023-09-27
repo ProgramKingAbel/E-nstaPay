@@ -1,6 +1,12 @@
 <div class="container vh-100 d-flex flex-column">
-<div class="align-items-center ">
-<h1>Add a new Category</h1>
+<div class="d-flex justify-content-around fixed-top pt-2 align-items-center heading-actions">
+<%= link_to groups_path do %>
+  <span class="arrow"><i class="uil uil-arrow-left icon"></i></span>
+<% end %>
+<h1>Add Category</h1>
+<i class="uil uil-search"></i>
+</div>
+
 <%= form_for(@group) do |f| %>
   <div class="m-2">
   <%= f.label :name %>
@@ -14,5 +20,4 @@
 </div>
   <%= f.submit 'Create Category', class: "btn btn-primary add-new m-2" %>
 <% end %>
-</div>
 </div>
