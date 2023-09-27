@@ -1,19 +1,30 @@
-<h1>Groups</h1>
-
+<div class="container vh-100 d-flex flex-column">
+<div class="d-flex justify-content-around fixed-top pt-2 align-items-center heading-actions">
+<%= link_to new_group_path do %>
+  <span class="arrow"><i class="uil uil-plus icon"></i></span>
+<%end%>
+<h1>CATEGORIES</h1>
+<i class="uil uil-search"></i>
+</div>
 <% if @groups.any? %>
-  <ul>
+  <ul class="category-list ">
     <% @groups.each do |group| %>
+      <%= link_to group_payments_path(group) ,class: "category-link" do %>
       <li>
-      <%= link_to group.name, group_payments_path(group)%>
-        Icon: <%= image_tag group.icon %>
-        Total Amount: <%= group.payments.sum(:amount) %>
+      <%= image_tag group.icon ,class:"category-icon" %>
+      <div class="category-detail">
+      <p><%= group.name%></p>
+      <p><%= group.created_at.strftime("%d %b %Y") %></p>
+      </div>        
+        <p class="price">$ <%= number_with_precision(group.payments.sum(:amount) , precision: 2) %></p>
+        
       </li>
+    <% end %>
     <% end %>
   </ul>
 <% else %>
   <p>No groups have been created yet. Please <%= link_to 'create a new group', new_group_path %> to get started.</p>
 <% end %>
 
-<%= link_to 'Add a New Group', new_group_path %>
-
-
+<%= link_to 'Add a New Group', new_group_path, class: "btn btn-primary add-new" %>
+</div>

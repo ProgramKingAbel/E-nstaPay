@@ -4,4 +4,6 @@ class Group < ApplicationRecord
 
   validates :name, presence: true
   validates :icon, presence: true
+
+  attribute :icon, default: 'https://www.pngmart.com/files/23/Art-PNG-Free-Download.png'
 end

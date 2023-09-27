@@ -1,18 +1,30 @@
-<h1>New Payment</h1>
+<div class="container vh-100 d-flex flex-column">
+<div class="d-flex justify-content-around fixed-top pt-2 align-items-center heading-actions">
+<%= link_to group_payments_path(@group) do %>
+  <span class="arrow"><i class="uil uil-arrow-left icon"></i></span>
+<% end %>
+<h1>New Transaction</h1>
+<i class="uil uil-search"></i>
+</div>
 
 <%= form_for [@group, @payment] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="m-2">
+  <%= f.label :name, class: "form-label"%>
+  <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: "Enter transaction name" %>
+</div>
+<div class="m-2">
+  <%= f.label :amount, class:"form-label"%>
+  <%= f.text_field :amount, class: "form-control"  %>
+</div>
 
-  <%= f.label :amount %>
-  <%= f.number_field :amount %>
-
-  <!-- Allow the user to select multiple groups -->
+<p class="m-2">Select to which categories to add transaction</p>
   <%= f.collection_check_boxes :group_ids, Group.all, :id, :name, include_hidden: false do |b| %>
+    <div class="m-2">
     <%= b.check_box %> <%= b.text %>
+    </div>
   <% end %>
 
-  <%= f.submit 'Create Payment' %>
+  <%= f.submit 'Create Transaction', class: "btn btn-primary mt-2" %>
 <% end %>
-
+</div>
 
