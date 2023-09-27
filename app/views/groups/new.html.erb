@@ -1,10 +1,18 @@
-<h1>New Group</h1>
+<div class="container vh-100 d-flex flex-column">
+<div class="align-items-center ">
+<h1>Add a new Category</h1>
 <%= form_for(@group) do |f| %>
+  <div class="m-2">
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: "Enter category name" %>
+</div>
+
+<div class="m-2">
 
   <%= f.label :icon %>
-  <%= f.text_field :icon %>
-
-  <%= f.submit 'Create Group' %>
+  <%= f.text_field :icon, autofocus: true, autocomplete: "icon", class: "form-control", placeholder: "Enter icon url"  %>
+</div>
+  <%= f.submit 'Create Category', class: "btn btn-primary add-new m-2" %>
 <% end %>
+</div>
+</div>

@@ -1,0 +1,44 @@
+.category-icon {
+    width: 100px;
+    aspect-ratio: 1;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0.5rem;
+    
+
+}
+
+.category-link {
+    text-decoration: none;
+    color: #434b54;
+}
+
+.category-list li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.category-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    justify-self: end;
+}
+
+.add-new {
+    text-decoration: none;
+    width: 50%;
+    align-self: center;
+    text-align: center;
+}
