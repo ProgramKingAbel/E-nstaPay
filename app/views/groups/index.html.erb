@@ -16,7 +16,8 @@
       <p><%= group.name%></p>
       <p><%= group.created_at.strftime("%d %b %Y") %></p>
       </div>        
-        <p class="price">$ <%= group.payments.sum(:amount) %></p>
+        <p class="price">$ <%= number_with_precision(group.payments.sum(:amount) , precision: 2) %></p>
+        
       </li>
     <% end %>
     <% end %>

@@ -9,7 +9,8 @@
 
 <div>
 <h2>Payments for <%= @group.name %></h2>
-<p class="price">Total Amount: $<%= @total_amount %></p>
+<p class="price">Total Amount: $<%= number_with_precision(@total_amount, precision: 2) %></p>
+
 </div>
 
 <table class="table">
@@ -23,7 +24,9 @@
   <% @payments.each do |payment| %>
     <tr>   
       <td><%= payment.name %></td>
-      <td>$<%= payment.amount %></td>
+      <td>$<%= number_with_precision(payment.amount, precision: 2) %></td>
+      
+      
     </tr>
     <% end %>
   </tbody>
