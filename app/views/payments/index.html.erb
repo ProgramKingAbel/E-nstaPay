@@ -1,14 +1,34 @@
-<h1>Payments for <%= @group.name %></h1>
+<div class="container vh-100 d-flex flex-column">
+<div class="d-flex justify-content-around fixed-top pt-2 align-items-center heading-actions">
+<%= link_to groups_path do %>
+  <span class="arrow"><i class="uil uil-arrow-left icon"></i></span>
+<% end %>
+<h1>TRANSACTIONS</h1>
+<i class="uil uil-search"></i>
+</div>
 
-<p>Total Amount: <%= @total_amount %></p>
+<div>
+<h2>Payments for <%= @group.name %></h2>
+<p class="price">Total Amount: $<%= @total_amount %></p>
+</div>
 
-<ul>
+<table class="table">
+<thead>
+    <tr>
+      <th scope="col">Transaction</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @payments.each do |payment| %>
-    <li><%= payment.name %> - <%= payment.amount %></li>
-  <% end %>
-</ul>
+    <tr>   
+      <td><%= payment.name %></td>
+      <td>$<%= payment.amount %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to 'Add a New Transaction', new_group_payment_path(@group) %>
+<%= link_to 'Add a New Transaction', new_group_payment_path(@group), class: "btn btn-primary mt-2" %>
 
-<%= link_to 'Back', groups_path %>
-
+</div>
