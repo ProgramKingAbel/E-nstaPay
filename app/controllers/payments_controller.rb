@@ -3,7 +3,7 @@ class PaymentsController < ApplicationController
 
   def index
     @group = Group.find(params[:group_id])
-    @payments = @group.payments
+    @payments = @group.payments.order(created_at: :desc)
     @total_amount = @payments.sum(:amount)
   end
 

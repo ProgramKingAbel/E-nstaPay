@@ -1,21 +1,21 @@
 .arrow {
-    background: transparent;
-    outline: none;
-    border: none;
-    color: #fff;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
 }
 
 .icon {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .heading-actions {
-    background: #3778c2;
-    color: #fff;
+  background: #3778c2;
+  color: #fff;
 }
 
-.forgot-password, .links {
-    color: #434b54;
-    align-self: center;
-   
+.forgot-password,
+.links {
+  color: #434b54;
+  align-self: center;
 }
