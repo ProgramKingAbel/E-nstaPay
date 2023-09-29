@@ -81,5 +81,5 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["E_NSTAPAY_DATABASE_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>
 
