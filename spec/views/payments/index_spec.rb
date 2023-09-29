@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Groups", type: :system do
+describe "Payments", type: :system do
   include Devise::Test::IntegrationHelpers
 
   it "Allows User to view the list Payments per Category" do
