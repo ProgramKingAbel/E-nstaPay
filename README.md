@@ -13,6 +13,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [👩‍💻 Presentation](#Presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -30,8 +32,7 @@
 
 # 📖 E-nstaPay <a name="about-project"></a>
 
-**E-nstaPay**
- E-nstaPay is an online budgeting app/Backend Service that enables one to keep track of transactions and expenditures when purchasing goods and services from different merchants.
+**E-nstaPay** is an online budgeting app/Backend Service that enables one to keep track of transactions and expenditures when purchasing goods and services from different merchants.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -65,6 +66,16 @@
 - **User Registration Authentication and Authorization**
 - **Merchants/categories page**
 - **Customer Transactions page**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+[Live Demo](https://instapay-z93h.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Project Walkthrough <a name="Presentation"></a>
+[Presentation](https://drive.google.com/file/d/1BIDZ6ZvHcdy2FwICcCzhLygsgLkXcdoy/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
