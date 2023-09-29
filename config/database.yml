@@ -81,5 +81,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["E_NSTAPAY_DATABASE_URL"] %>
-
+  database: E_nstaPay_production
+  username: E_nstaPay
+  password: <%= ENV["E_NSTAPAY_DATABASE_PASSWORD"] %>
