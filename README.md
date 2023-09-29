@@ -163,7 +163,7 @@ If you like this project consider leaving a star in the repo.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for giving me this opportunity to showcase my skills. I would also like to thank the Open Source Community for providing vast resources for free that helped in various stages of this project.
+I would like to thank Microverse for giving me this opportunity to showcase my skills. I would also like to thank [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for design inspiration as well as the Open Source Community for providing vast resources for free that helped in various stages of this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
