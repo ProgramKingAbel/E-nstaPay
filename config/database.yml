@@ -79,8 +79,6 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: E_nstaPay_production
-  username: E_nstaPay
-  password: <%= ENV["E_NSTAPAY_DATABASE_PASSWORD"] %>
+
+   production:
+     url: <%= ENV["DATABASE_URL"] %>
