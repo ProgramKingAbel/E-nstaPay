@@ -18,7 +18,7 @@
 </div>
 
 <p class="m-2">Select to which categories to add transaction</p>
-  <%= f.collection_check_boxes :group_ids, Group.all, :id, :name, include_hidden: false do |b| %>
+  <%= f.collection_check_boxes :group_ids, current_user.groups, :id, :name, include_hidden: false do |b| %>
     <div class="m-2">
     <%= b.check_box %> <%= b.text %>
     </div>
