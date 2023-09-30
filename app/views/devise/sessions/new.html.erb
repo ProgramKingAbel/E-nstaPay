@@ -1,0 +1,35 @@
+<div class="container vh-100 d-flex flex-column">
+
+<div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="d-flex justify-content-around fixed-top pt-2 align-items-center heading-actions">
+<%= link_to root_path do %>
+  <span class="arrow"><i class="uil uil-arrow-left icon"></i></span>
+<% end %>
+<h2>LOGIN</h2>
+<%= f.submit "Log in", class: "arrow"%>
+</div>
+
+  <div class="field m-2">
+    <%= f.label :email, class: "visually-hidden"%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Enter your email" %>
+  </div>
+
+  <div class="field m-2">
+    <%= f.label :password, class: "visually-hidden" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Enter your password"%>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field m-2">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+<% end %>
+
+</div>
+<%= render "devise/shared/links"%>
+</div>

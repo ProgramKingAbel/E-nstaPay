@@ -1,0 +1,40 @@
+<div class="container vh-100 d-flex flex-column">
+<div class="d-flex justify-content-around fixed-top pt-2 align-items-center heading-actions">
+<%= link_to groups_path do %>
+  <span class="arrow"><i class="uil uil-arrow-left icon"></i></span>
+<% end %>
+<h1>TRANSACTIONS</h1>
+<i class="uil uil-search"></i>
+</div>
+
+<div>
+<h2>Payments for <%= @group.name %></h2>
+<p class="price">Total Amount: $<%= number_with_precision(@total_amount, precision: 2) %></p>
+
+</div>
+
+<table class="table">
+<thead>
+    <tr>
+      <th scope="col">Transaction</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @payments.each do |payment| %>
+    <tr>   
+      <td><%= payment.name %></td>
+      <td>$<%= number_with_precision(payment.amount, precision: 2) %></td>
+      
+      
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="container-fluid fixed-bottom btn-green">
+<%= link_to 'Add a New Transaction', new_group_payment_path(@group), class: "green-button btn" %>
+</div>
+
+
+</div>
