@@ -40,3 +40,20 @@
   align-self: center;
   text-align: center;
 }
+
+.btn-green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #51b523;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.green-button {
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 1rem;
+}
