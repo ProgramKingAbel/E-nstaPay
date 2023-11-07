@@ -32,7 +32,7 @@
 
 # 📖 E-nstaPay <a name="about-project"></a>
 
-**E-nstaPay** is an online budgeting app/Backend Service that enables one to keep track of transactions and expenditures when purchasing goods and services from different merchants and service providers.
+**E-nstaPay** is an online budgeting app/Backend Service that enables one to keep track of transactions and expenditures when purchasing goods and services from different merchants and service providers hence knowing where you spent and on what.
 
 ## 🛠 Built With <a name="built-with"></a>
 
