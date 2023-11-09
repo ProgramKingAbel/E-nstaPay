@@ -124,7 +124,7 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-  rspec
+  rspec spec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
